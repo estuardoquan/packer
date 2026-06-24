@@ -1,0 +1,33 @@
+pve_api_url = 
+pve_node = 
+pve_username = 
+pve_token = 
+
+bios = "ovmf"
+efi_storage_pool = "local-lvm"
+
+iso_download_pve = true	
+iso_storage_pool = "local-lvm"
+
+cloud_init = true	
+cloud_init_storage_pool	= "local-lvm"
+
+scsi_controller = "virtio-scsi-pci"	
+
+vcpu = 2                                
+memory = 4096
+
+disk_type = "scsi"
+disk_storage_pool = "local-lvm"
+
+net_bridge = "vmbr0"	
+net_model = "virtio"	
+net_vlan_tag = ""	
+
+ssh_keypair_name = "id_ed25519"
+ssh_private_key_file = "~/.ssh/id_ed25519"
+ssh_public_key_file = "~/.ssh/id_ed25519.pub"
+
+vm_id = {                                       
+  "fedora43" = 9000
+}

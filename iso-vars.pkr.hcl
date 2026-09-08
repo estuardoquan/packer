@@ -67,6 +67,7 @@ variable "iso_url" {
     "debian13" = "https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-13.3.0-amd64-netinst.iso"
     "fedora42" = "https://download.fedoraproject.org/pub/fedora/linux/releases/42/Server/x86_64/iso/Fedora-Server-netinst-x86_64-42-1.1.iso"
     "fedora43" = "https://download.fedoraproject.org/pub/fedora/linux/releases/43/Server/x86_64/iso/Fedora-Server-netinst-x86_64-43-1.6.iso"
+    "fedora44" = "https://download.fedoraproject.org/pub/fedora/linux/releases/44/Server/x86_64/iso/Fedora-Server-netinst-x86_64-44-1.7.iso"
     "ubuntu22" = "https://releases.ubuntu.com/22.04/ubuntu-22.04.5-live-server-amd64.iso"
     "ubuntu24" = "https://releases.ubuntu.com/24.04/ubuntu-24.04.3-live-server-amd64.iso"
   }
@@ -81,6 +82,7 @@ variable "iso_checksum" {
     "debian13" = "file:https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/SHA256SUMS"
     "fedora42" = "file:https://download.fedoraproject.org/pub/fedora/linux/releases/42/Server/x86_64/iso/Fedora-Server-42-1.1-x86_64-CHECKSUM"
     "fedora43" = "file:https://download.fedoraproject.org/pub/fedora/linux/releases/43/Server/x86_64/iso/Fedora-Server-43-1.6-x86_64-CHECKSUM"
+    "fedora44" = "file:https://download.fedoraproject.org/pub/fedora/linux/releases/44/Server/x86_64/iso/Fedora-Server-44-1.7-x86_64-CHECKSUM"
     "ubuntu22" = "file:https://releases.ubuntu.com/22.04/SHA256SUMS"
     "ubuntu24" = "file:https://releases.ubuntu.com/24.04/SHA256SUMS"
   }

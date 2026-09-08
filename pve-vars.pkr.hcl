@@ -114,6 +114,23 @@ variable "bios" {
   default = "seabios"
 }
 
+variable "efi_storage_pool" {
+  type    = string
+  default = "local-lvm"
+}
+
+variable "pre_enrolled_keys" {
+  type    = bool
+  default = false 
+}
+variable "efi_format" {
+  type    = string
+  default = "raw"
+}
+variable "efi_type" {
+  type    = string
+  default = "4m"
+}
 variable "qemu_agent" {
   type    = bool
   default = true

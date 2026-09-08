@@ -229,7 +229,7 @@ variable "net_model" {
 
 variable "net_vlan_tag" {
   type    = string
-  default = "1"
+  default = ""
 }
 
 variable "net_firewall" {

@@ -1,6 +1,6 @@
 build {
     source "proxmox-iso.image" {
-        name         = "debian-k3s"
+        name         = "deb-k3s"
         boot_command = var.boot_cmd_debian
         boot_wait    = var.boot_wait
 
@@ -25,7 +25,7 @@ build {
             unmount          = var.unmount_iso
         }
 
-        template_name = "<template-name>"
+        template_name = "deb-k3s-220"
         vm_id         = var.vm_id["debian13"]
     }
 

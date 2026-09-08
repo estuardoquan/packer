@@ -111,7 +111,7 @@ variable "machine" {
 
 variable "bios" {
   type    = string
-  default = "seabios"
+  default = "ovmf"
 }
 
 variable "efi_storage_pool" {

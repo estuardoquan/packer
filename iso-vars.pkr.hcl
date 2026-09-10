@@ -113,6 +113,20 @@ variable "vm_id" {
   }
 }
 
+variable "vm_template" {
+  type = map(string)
+  default = {
+    "centos9"  = ""
+    "debian11" = ""
+    "debian12" = ""
+    "debian13" = ""
+    "fedora42" = ""
+    "fedora43" = ""
+    "ubuntu22" = ""
+    "ubuntu24" = ""
+  }
+}
+
 // Boot Commands //
 variable "boot_wait" {
   type    = string
@@ -141,6 +155,17 @@ variable "boot_cmd_debian" {
     "priority=critical ",
     "preseed/url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/preseed.cfg ",
     "<wait><enter>"
+  ]
+}
+
+variable "boot_cmd_debian_efi" {
+  description = "Boot command for Debian"
+  type        = list(string)
+  default = [
+    "<wait5>c<wait>",
+    "linux /install.amd/vmlinuz auto=true priority=critical preseed/url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/preseed.cfg ---<enter><wait>",
+    "initrd /install.amd/initrd.gz<enter><wait>",
+    "boot<enter>"
   ]
 }
 

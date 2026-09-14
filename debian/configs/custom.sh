@@ -5,7 +5,10 @@ export DEBIAN_FRONTEND=noninteractive
 
 apt-get update
 apt-get install -y --no-install-recommends \
-    git tmux neovim iperf3 stow
+    git tmux neovim iperf3 wireguard-tools stow \
+    resolvconf open-iscsi nfs-common apparmor
+
+systemctl enable iscsid
 
 # k3s binary and unit only — no start, no enable, no cluster identity
 curl -sfL https://get.k3s.io | \

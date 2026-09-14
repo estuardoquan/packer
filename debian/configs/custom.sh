@@ -1,11 +1,10 @@
 #!/bin/sh
-set -eu
 
-export DEBIAN_FRONTEND=noninteractive
+set -eu
 
 apt-get update
 apt-get install -y --no-install-recommends \
-    git tmux neovim iperf3 wireguard-tools stow \
+    git tmux iperf3 stow \
     resolvconf open-iscsi nfs-common apparmor
 
 systemctl enable iscsid

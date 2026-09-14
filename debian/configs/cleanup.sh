@@ -1,4 +1,5 @@
 #!/bin/bash
+
 set -euxo pipefail
 
 # clean cloud-init state

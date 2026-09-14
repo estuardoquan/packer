@@ -31,8 +31,8 @@ build {
 
     provisioner "shell" {
         scripts = concat(var.user_scripts, [
-          "configs/custom.sh",
-          "configs/cleanup.sh",
+          "${path.root}/configs/custom.sh",
+          "${path.root}/configs/cleanup.sh",
         ])
     }
 }

@@ -8,8 +8,8 @@ sed -i '/^#.*\/community$/s/^#//' /etc/apk/repositories
 apk update
 apk add --no-cache \
     cloud-init cloud-init-openrc \
-    docker docker-cli-compose \
-    curl git tmux
+    docker \
+    curl git tmux e2fsprogs-extra
 
 rc-update add cloud-init-local boot
 rc-update add cloud-init default

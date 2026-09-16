@@ -108,8 +108,11 @@ variable "boot_cmd_alpine" {
     "<wait30>root<enter><wait5>",
     "setup-interfaces -a -r<enter><wait10>",
     "wget -O /tmp/answers http://{{ .HTTPIP }}:{{ .HTTPPort }}/answers<enter><wait5>",
-    "ERASE_DISKS=/dev/sda setup-alpine -e -f /tmp/answers<enter><wait5>",
-    "<wait2m>",
+    "ERASE_DISKS=/dev/sda setup-alpine -e -f /tmp/answers<enter><wait30>",
+    "mount /dev/sda3 /mnt<enter><wait5>",
+    "apk add -U --root /mnt qemu-guest-agent qemu-guest-agent-openrc<enter><wait1m>",
+    "chroot /mnt rc-update add qemu-guest-agent default<enter><wait5>",
+    "umount /mnt<enter><wait5>",
     "reboot<enter>"
   ]
 }

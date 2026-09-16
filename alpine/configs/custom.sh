@@ -13,5 +13,8 @@ apk add --no-cache \
 
 rc-update add cloud-init-local boot
 rc-update add cloud-init default
+rc-update add cloud-config default
+rc-update add cloud-final default
+
 rc-update add cgroups boot
 rc-update add docker default

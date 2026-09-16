@@ -108,7 +108,7 @@ variable "boot_cmd_alpine" {
     "<wait30>root<enter><wait5>",
     "setup-interfaces -a -r<enter><wait10>",
     "wget -O /tmp/answers http://{{ .HTTPIP }}:{{ .HTTPPort }}/answers<enter><wait5>",
-    "setup-alpine -f /tmp/answers<enter><wait5>",
+    "ERASE_DISKS=/dev/sda setup-alpine -e -f /tmp/answers<enter><wait5>",
     "<wait2m>",
     "reboot<enter>"
   ]

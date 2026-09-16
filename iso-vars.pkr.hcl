@@ -26,42 +26,10 @@ variable "apt_proxy_https" {
   default     = ""
 }
 
-variable "centos_install_url" {
-  description = "Installation tree URL - single source, not a mirror list."
-  type        = map(string)
-  default = {
-    "centos9" = ""
-  }
-}
-
-variable "centos_mirror_appstream" {
-  description = "Appstream mirror list, if set packages will be updated on install."
-  type        = map(string)
-  default = {
-    "centos9" = ""
-  }
-}
-
-variable "centos_mirror_baseos" {
-  description = "Baseos mirror list, if set packages will be updated on install."
-  type        = map(string)
-  default = {
-    "centos9" = ""
-  }
-}
-
-variable "centos_mirror_extras" {
-  description = "Extras mirror list, if set packages will be updated on install."
-  type        = map(string)
-  default = {
-    "centos9" = ""
-  }
-}
-
 variable "iso_url" {
   type = map(string)
   default = {
-    "centos9"  = ""
+    "alpine3"  = "https://dl-cdn.alpinelinux.org/alpine/v3.24/releases/x86_64/alpine-virt-3.24.1-x86_64.iso"
     "debian11" = "https://get.debian.org/images/archive/11.11.0/amd64/iso-cd/debian-11.11.0-amd64-netinst.iso"
     "debian12" = "https://get.debian.org/images/archive/12.13.0/amd64/iso-cd/debian-12.13.0-amd64-netinst.iso"
     "debian13" = "https://cdimage.debian.org/debian-cd/13.7.0/amd64/iso-cd/debian-13.7.0-amd64-netinst.iso"
@@ -76,7 +44,7 @@ variable "iso_url" {
 variable "iso_checksum" {
   type = map(string)
   default = {
-    "centos9"  = "file:"
+    "alpine3"  = "file:https://dl-cdn.alpinelinux.org/alpine/v3.24/releases/x86_64/alpine-virt-3.24.1-x86_64.iso.sha256"
     "debian11" = "file:https://get.debian.org/images/archive/11.11.0/amd64/iso-cd/SHA256SUMS"
     "debian12" = "file:https://get.debian.org/images/archive/12.13.0/amd64/iso-cd/SHA256SUMS"
     "debian13" = "file:https://cdimage.debian.org/debian-cd/13.7.0/amd64/iso-cd/SHA256SUMS"
@@ -102,7 +70,7 @@ variable "os" {
 variable "vm_id" {
   type = map(number)
   default = {
-    "centos9"  = 0
+    "alpine3"  = 0
     "debian11" = 0
     "debian12" = 0
     "debian13" = 0
@@ -116,7 +84,7 @@ variable "vm_id" {
 variable "vm_template" {
   type = map(string)
   default = {
-    "centos9"  = ""
+    "alpine3"  = ""
     "debian11" = ""
     "debian12" = ""
     "debian13" = ""
@@ -133,15 +101,16 @@ variable "boot_wait" {
   default = "5s"
 }
 
-variable "boot_cmd_centos" {
-  description = "Boot command for CentOS Stream 8-9"
+variable "boot_cmd_alpine" {
+  description = "Boot command for Alpine — types into the live shell"
   type        = list(string)
   default = [
-    "<tab>",
-    "<bs><bs><bs><bs><bs>",
-    "hostname=centos ",
-    "inst.text inst.ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/anaconda-ks.cfg ",
-    "<wait><enter>"
+    "<wait30>root<enter><wait5>",
+    "setup-interfaces -a -r<enter><wait10>",
+    "wget -O /tmp/answers http://{{ .HTTPIP }}:{{ .HTTPPort }}/answers<enter><wait5>",
+    "setup-alpine -f /tmp/answers<enter><wait5>",
+    "<wait2m>",
+    "reboot<enter>"
   ]
 }
 

@@ -1,0 +1,26 @@
+pve_api_url  = "https://<pve-ip>:8006/api2/json"
+pve_username = "<user>@<realm>!<token-id>"
+pve_token    = "<token-secret>"
+pve_node     = "<node>"
+
+disk_storage_pool       = "<storage>"
+efi_storage_pool        = "<storage>"
+cloud_init_storage_pool = "<storage>"
+
+disk_size = "<size>G"
+vcpu      = <cores>
+memory    = <mb>
+
+net_bridge = "<bridge>"
+
+ssh_keypair_name     = "id_ed25519"
+ssh_private_key_file = "~/.ssh/id_ed25519"
+ssh_public_key_file  = "~/.ssh/id_ed25519.pub"
+
+vm_id = {
+  "<tag>" = <vmid>
+}
+
+vm_template = {
+  "<tag>" = "<template-name>"
+}

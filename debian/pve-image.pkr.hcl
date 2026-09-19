@@ -1,1 +1,0 @@
-../pve-image.pkr.hcl

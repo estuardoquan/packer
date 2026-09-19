@@ -9,11 +9,15 @@ apk update
 apk add --no-cache \
     cloud-init cloud-init-openrc \
     mount \
+    openssh-server-pam \
     docker \
     curl git tmux e2fsprogs-extra
 
 # replace mdev with eudev: provides /dev/virtio-ports/* for qemu-guest-agent
 setup-devd udev
+
+# sshd refuses key logins for locked accounts unless PAM is used
+printf 'UsePAM yes\n' > /etc/ssh/sshd_config.d/10-pam.conf
 
 rc-update add cloud-init-local boot
 rc-update add cloud-init default

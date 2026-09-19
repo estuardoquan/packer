@@ -3,11 +3,12 @@
 set -eu
 
 # clean cloud-init state
-cloud-init clean --machine-id --seed || true
+cloud-init clean --machine-id --seed
 rm -rf /var/lib/cloud/instances/* /var/lib/cloud/data/*
 
 # remove image identifiers
-rm -f /etc/hostname /etc/ssh/ssh_host_* /var/lib/seedrng
+rm -rf /var/lib/seedrng
+rm -f /etc/hostname /etc/ssh/ssh_host_* 
 truncate -s 0 /etc/machine-id
 
 # wipe build key

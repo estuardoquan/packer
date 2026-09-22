@@ -198,7 +198,7 @@ variable "disk_io_thread" {
 
 variable "disk_size" {
   type    = string
-  default = "10G"
+  default = "16G"
 }
 
 variable "disk_ssd" {

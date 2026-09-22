@@ -16,6 +16,9 @@ apk add --no-cache \
 # replace mdev with eudev: provides /dev/virtio-ports/* for qemu-guest-agent
 setup-devd udev
 
+# rebuild the OpenRC dependency tree so it includes the udev services
+/usr/libexec/rc/bin/rc-depend -u
+
 # sshd refuses key logins for locked accounts unless PAM is used
 printf 'UsePAM yes\n' > /etc/ssh/sshd_config.d/10-pam.conf
 
@@ -29,4 +32,3 @@ rc-update add cloud-final default
 
 rc-update add cgroups boot
 rc-update add docker default
-

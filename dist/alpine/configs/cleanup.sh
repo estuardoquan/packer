@@ -16,3 +16,6 @@ truncate -s 0 /root/.ssh/authorized_keys
 
 # clear apk cache
 rm -rf /var/cache/apk/*
+
+# clear saved OpenRC dependency tree; clones generate a fresh one on first boot
+rm -rf /var/cache/rc/*

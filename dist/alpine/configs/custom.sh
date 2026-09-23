@@ -8,10 +8,10 @@ sed -i '/^#.*\/community$/s/^#//' /etc/apk/repositories
 apk update
 apk add --no-cache \
     cloud-init cloud-init-openrc \
-    doas mount \
+    bash doas mount \
     openssh-server-pam \
-    docker \
-    curl git tmux e2fsprogs-extra
+    docker docker-cli-compose \
+    curl e2fsprogs-extra git neovim stow tmux 
 
 # replace mdev with eudev: provides /dev/virtio-ports/* for qemu-guest-agent
 setup-devd udev

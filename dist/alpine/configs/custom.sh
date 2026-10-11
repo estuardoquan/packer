@@ -8,7 +8,7 @@ sed -i '/^#.*\/community$/s/^#//' /etc/apk/repositories
 apk update
 apk add --no-cache \
     cloud-init cloud-init-openrc \
-    bash doas mount \
+    bash doas mount make \
     openssh-server-pam \
     docker docker-cli-compose \
     curl e2fsprogs-extra git neovim stow tmux 

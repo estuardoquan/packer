@@ -1,0 +1,126 @@
+2026/10/08 16:08:46 [INFO] Packer version: 1.16.1 [go1.26.8 linux amd64]
+2026/10/08 16:08:46 [INFO] PACKER_CONFIG env var not set; checking the default config file path
+2026/10/08 16:08:46 [INFO] PACKER_CONFIG env var set; attempting to open config file: /home/admin/.packerconfig
+2026/10/08 16:08:46 [WARN] Config file doesn't exist: /home/admin/.packerconfig
+2026/10/08 16:08:46 [INFO] Setting cache directory: /home/admin/.cache/packer
+2026/10/08 16:08:46 [TRACE] listing potential installations for "github.com/hashicorp/proxmox" that match ">=1.1.5". plugingetter.ListInstallationsOptions{PluginDirectory:"/home/admin/.config/packer/plugins", BinaryInstallationOptions:plugingetter.BinaryInstallationOptions{APIVersionMajor:"5", APIVersionMinor:"0", OS:"linux", ARCH:"amd64", Ext:"", Checksummers:[]plugingetter.Checksummer{plugingetter.Checksummer{Type:"sha256", Hash:(*sha256.Digest)(0x15e076b03680)}}, ReleasesOnly:false}}
+2026/10/08 16:08:47 [TRACE] Found the following "github.com/hashicorp/proxmox" installations: [{/home/admin/.config/packer/plugins/github.com/hashicorp/proxmox/packer-plugin-proxmox_v1.2.3_x5.0_linux_amd64 v1.2.3 x5.0},{/home/admin/.config/packer/plugins/github.com/hashicorp/proxmox/packer-plugin-proxmox_v1.2.4_x5.0_linux_amd64 v1.2.4 x5.0}]
+2026/10/08 16:08:47 [INFO] found external [-packer-default-plugin-name- clone iso] builders from proxmox plugin
+2026/10/08 16:08:47 [TRACE] listing potential installations for <nil> that match "". plugingetter.ListInstallationsOptions{PluginDirectory:"/home/admin/.config/packer/plugins", BinaryInstallationOptions:plugingetter.BinaryInstallationOptions{APIVersionMajor:"5", APIVersionMinor:"0", OS:"linux", ARCH:"amd64", Ext:"", Checksummers:[]plugingetter.Checksummer{plugingetter.Checksummer{Type:"sha256", Hash:(*sha256.Digest)(0x15e076843000)}}, ReleasesOnly:false}}
+2026/10/08 16:08:47 [INFO] found external [-packer-default-plugin-name- clone iso] builders from proxmox plugin
+2026/10/08 16:08:47 [TRACE] validateValue: not active for boot_cmd_fedora, so skipping
+2026/10/08 16:08:47 [TRACE] validateValue: not active for memory, so skipping
+2026/10/08 16:08:47 [TRACE] validateValue: not active for net_firewall, so skipping
+2026/10/08 16:08:47 [TRACE] validateValue: not active for ssh_keypair_name, so skipping
+2026/10/08 16:08:47 [TRACE] validateValue: not active for disk_size, so skipping
+2026/10/08 16:08:47 [TRACE] validateValue: not active for disk_ssd, so skipping
+2026/10/08 16:08:47 [TRACE] validateValue: not active for vm_id, so skipping
+2026/10/08 16:08:47 [TRACE] validateValue: not active for boot_wait, so skipping
+2026/10/08 16:08:47 [TRACE] validateValue: not active for boot_cmd_debian, so skipping
+2026/10/08 16:08:47 [TRACE] validateValue: not active for disk_cache_mode, so skipping
+2026/10/08 16:08:47 [TRACE] validateValue: not active for vm_template, so skipping
+2026/10/08 16:08:47 [TRACE] validateValue: not active for efi_type, so skipping
+2026/10/08 16:08:47 [TRACE] validateValue: not active for sockets, so skipping
+2026/10/08 16:08:47 [TRACE] validateValue: not active for disk_discard, so skipping
+2026/10/08 16:08:47 [TRACE] validateValue: not active for iso_checksum, so skipping
+2026/10/08 16:08:47 [TRACE] validateValue: not active for unmount_iso, so skipping
+2026/10/08 16:08:47 [TRACE] validateValue: not active for ssh_timeout, so skipping
+2026/10/08 16:08:47 [TRACE] validateValue: not active for pre_enrolled_keys, so skipping
+2026/10/08 16:08:47 [TRACE] validateValue: not active for disk_storage_pool, so skipping
+2026/10/08 16:08:47 [TRACE] validateValue: not active for apt_proxy_http, so skipping
+2026/10/08 16:08:47 [TRACE] validateValue: not active for iso_url, so skipping
+2026/10/08 16:08:47 [TRACE] validateValue: not active for http_bind_address, so skipping
+2026/10/08 16:08:47 [TRACE] validateValue: not active for efi_format, so skipping
+2026/10/08 16:08:47 [TRACE] validateValue: not active for pve_node, so skipping
+2026/10/08 16:08:47 [TRACE] validateValue: not active for ssh_password, so skipping
+2026/10/08 16:08:47 [TRACE] validateValue: not active for cpu_type, so skipping
+2026/10/08 16:08:47 [TRACE] validateValue: not active for pve_token, so skipping
+2026/10/08 16:08:47 [TRACE] validateValue: not active for skip_tls_check, so skipping
+2026/10/08 16:08:47 [TRACE] validateValue: not active for qemu_agent, so skipping
+2026/10/08 16:08:47 [TRACE] validateValue: not active for cloud_init_storage_pool, so skipping
+2026/10/08 16:08:47 [TRACE] validateValue: not active for vcpu, so skipping
+2026/10/08 16:08:47 [TRACE] validateValue: not active for net_model, so skipping
+2026/10/08 16:08:47 [TRACE] validateValue: not active for boot_cmd_debian_efi, so skipping
+2026/10/08 16:08:47 [TRACE] validateValue: not active for boot_cmd_ubuntu22, so skipping
+2026/10/08 16:08:47 [TRACE] validateValue: not active for ssh_private_key_file, so skipping
+2026/10/08 16:08:47 [TRACE] validateValue: not active for machine, so skipping
+2026/10/08 16:08:47 [TRACE] validateValue: not active for disk_io_thread, so skipping
+2026/10/08 16:08:47 [TRACE] validateValue: not active for disk_type, so skipping
+2026/10/08 16:08:47 [TRACE] validateValue: not active for net_vlan_tag, so skipping
+2026/10/08 16:08:47 [TRACE] validateValue: not active for user_scripts, so skipping
+2026/10/08 16:08:47 [TRACE] validateValue: not active for http_port_min, so skipping
+2026/10/08 16:08:47 [TRACE] validateValue: not active for cloud_init, so skipping
+2026/10/08 16:08:47 [TRACE] validateValue: not active for disk_format, so skipping
+2026/10/08 16:08:47 [TRACE] validateValue: not active for task_timeout, so skipping
+2026/10/08 16:08:47 [TRACE] validateValue: not active for os, so skipping
+2026/10/08 16:08:47 [TRACE] validateValue: not active for boot_cmd_alpine, so skipping
+2026/10/08 16:08:47 [TRACE] validateValue: not active for http_interface, so skipping
+2026/10/08 16:08:47 [TRACE] validateValue: not active for http_port_max, so skipping
+2026/10/08 16:08:47 [TRACE] validateValue: not active for pve_username, so skipping
+2026/10/08 16:08:47 [TRACE] validateValue: not active for bios, so skipping
+2026/10/08 16:08:47 [TRACE] validateValue: not active for net_bridge, so skipping
+2026/10/08 16:08:47 [TRACE] validateValue: not active for ssh_clear_authorized_keys, so skipping
+2026/10/08 16:08:47 [TRACE] validateValue: not active for efi_storage_pool, so skipping
+2026/10/08 16:08:47 [TRACE] validateValue: not active for iso_download_pve, so skipping
+2026/10/08 16:08:47 [TRACE] validateValue: not active for apt_proxy_https, so skipping
+2026/10/08 16:08:47 [TRACE] validateValue: not active for ssh_username, so skipping
+2026/10/08 16:08:47 [TRACE] validateValue: not active for scsi_controller, so skipping
+2026/10/08 16:08:47 [TRACE] validateValue: not active for iso_storage_pool, so skipping
+2026/10/08 16:08:47 [TRACE] Using protobuf for communication with plugins
+2026/10/08 16:08:47 [INFO] Starting external plugin /home/admin/.config/packer/plugins/github.com/hashicorp/proxmox/packer-plugin-proxmox_v1.2.4_x5.0_linux_amd64 start builder --protobuf iso
+2026/10/08 16:08:47 Starting plugin: /home/admin/.config/packer/plugins/github.com/hashicorp/proxmox/packer-plugin-proxmox_v1.2.4_x5.0_linux_amd64 []string{"/home/admin/.config/packer/plugins/github.com/hashicorp/proxmox/packer-plugin-proxmox_v1.2.4_x5.0_linux_amd64", "start", "builder", "--protobuf", "iso"}
+2026/10/08 16:08:47 Waiting for RPC address for: /home/admin/.config/packer/plugins/github.com/hashicorp/proxmox/packer-plugin-proxmox_v1.2.4_x5.0_linux_amd64
+2026/10/08 16:08:47 packer-plugin-proxmox_v1.2.4_x5.0_linux_amd64 plugin: 2026/10/08 16:08:47 Plugin address: unix /tmp/packer-plugin4260788267
+2026/10/08 16:08:47 packer-plugin-proxmox_v1.2.4_x5.0_linux_amd64 plugin: 2026/10/08 16:08:47 Waiting for connection...
+2026/10/08 16:08:47 Received unix RPC address for /home/admin/.config/packer/plugins/github.com/hashicorp/proxmox/packer-plugin-proxmox_v1.2.4_x5.0_linux_amd64: addr is /tmp/packer-plugin4260788267
+2026/10/08 16:08:47 packer-plugin-proxmox_v1.2.4_x5.0_linux_amd64 plugin: 2026/10/08 16:08:47 Serving a plugin connection...
+2026/10/08 16:08:47 packer-plugin-proxmox_v1.2.4_x5.0_linux_amd64 plugin: 2026/10/08 16:08:47 [TRACE] starting builder iso
+2026/10/08 16:08:47 packer-plugin-proxmox_v1.2.4_x5.0_linux_amd64 plugin: 2026/10/08 16:08:47 [DEBUG] - common: sending ConfigSpec as protobuf
+2026/10/08 16:08:47 [DEBUG] - common: receiving ConfigSpec as protobuf
+2026/10/08 16:08:47 packer-plugin-proxmox_v1.2.4_x5.0_linux_amd64 plugin: 2026/10/08 16:08:47 Cloud-Init disk type not set, using default 'ide'
+2026/10/08 16:08:48 packer-plugin-proxmox_v1.2.4_x5.0_linux_amd64 plugin: 2026/10/08 16:08:48 boot_iso device type not set, using default type 'ide' and index '2'
+2026/10/08 16:08:48 packer-plugin-proxmox_v1.2.4_x5.0_linux_amd64 plugin: 2026/10/08 16:08:48 [DEBUG] - common: sending ConfigSpec as protobuf
+2026/10/08 16:08:48 [DEBUG] - common: receiving ConfigSpec as protobuf
+2026/10/08 16:08:48 [INFO] Starting external plugin /usr/bin/packer execute --protobuf packer-provisioner-shell
+2026/10/08 16:08:48 Starting plugin: /usr/bin/packer []string{"/usr/bin/packer", "execute", "--protobuf", "packer-provisioner-shell"}
+2026/10/08 16:08:48 Waiting for RPC address for: /usr/bin/packer
+2026/10/08 16:08:48 packer-provisioner-shell plugin: [INFO] Packer version: 1.16.1 [go1.26.8 linux amd64]
+2026/10/08 16:08:48 packer-provisioner-shell plugin: [INFO] PACKER_CONFIG env var not set; checking the default config file path
+2026/10/08 16:08:48 packer-provisioner-shell plugin: [INFO] PACKER_CONFIG env var set; attempting to open config file: /home/admin/.packerconfig
+2026/10/08 16:08:48 packer-provisioner-shell plugin: [WARN] Config file doesn't exist: /home/admin/.packerconfig
+2026/10/08 16:08:48 packer-provisioner-shell plugin: [INFO] Setting cache directory: /home/admin/.cache/packer
+2026/10/08 16:08:48 packer-provisioner-shell plugin: Plugin address: unix /tmp/packer-plugin308083628
+2026/10/08 16:08:48 packer-provisioner-shell plugin: Waiting for connection...
+2026/10/08 16:08:48 Received unix RPC address for /usr/bin/packer: addr is /tmp/packer-plugin308083628
+2026/10/08 16:08:48 packer-provisioner-shell plugin: Serving a plugin connection...
+2026/10/08 16:08:48 packer-provisioner-shell plugin: [DEBUG] - common: sending ConfigSpec as protobuf
+2026/10/08 16:08:48 [DEBUG] - common: receiving ConfigSpec as protobuf
+2026/10/08 16:08:48 packer-provisioner-shell plugin: [DEBUG] - common: sending ConfigSpec as protobuf
+2026/10/08 16:08:48 [DEBUG] - common: receiving ConfigSpec as protobuf
+2026/10/08 16:08:48 ui: [1;32mproxmox-iso.alpine: output will be in this color.[0m
+2026/10/08 16:08:48 ui: 
+2026/10/08 16:08:48 Build debug mode: false
+2026/10/08 16:08:48 Force build: false
+2026/10/08 16:08:48 On error: 
+2026/10/08 16:08:48 Waiting on builds to complete...
+2026/10/08 16:08:48 Starting build run: proxmox-iso.alpine
+2026/10/08 16:08:48 Running builder: proxmox-iso
+2026/10/08 16:08:48 [INFO] (telemetry) Starting builder proxmox-iso.alpine
+2026/10/08 16:08:48 packer-plugin-proxmox_v1.2.4_x5.0_linux_amd64 plugin: 2026/10/08 16:08:48 using token auth
+2026/10/08 16:08:48 packer-plugin-proxmox_v1.2.4_x5.0_linux_amd64 plugin: 2026/10/08 16:08:48 [INFO] - beginning download of https://dl-cdn.alpinelinux.org/alpine/v3.24/releases/x86_64/alpine-virt-3.24.1-x86_64.iso to node pve-39
+2026/10/08 16:08:51 packer-plugin-proxmox_v1.2.4_x5.0_linux_amd64 plugin: 2026/10/08 16:08:51 [ERROR] - failed to download iso from https://dl-cdn.alpinelinux.org/alpine/v3.24/releases/x86_64/alpine-virt-3.24.1-x86_64.iso: 401 Authentication failed!
+2026/10/08 16:08:51 [INFO] (telemetry) ending proxmox-iso.alpine
+2026/10/08 16:08:51 ui error: [1;31mBuild 'proxmox-iso.alpine' errored after 3 seconds 10 milliseconds: failed to download ISO with all the provided URLs, attempted: https://dl-cdn.alpinelinux.org/alpine/v3.24/releases/x86_64/alpine-virt-3.24.1-x86_64.iso[0m
+2026/10/08 16:08:51 ui: 
+==> Wait completed after 3 seconds 10 milliseconds
+2026/10/08 16:08:51 machine readable: error-count []string{"1"}
+2026/10/08 16:08:51 ui error: 
+==> Some builds didn't complete successfully and had errors:
+2026/10/08 16:08:51 machine readable: proxmox-iso.alpine,error []string{"failed to download ISO with all the provided URLs, attempted: https://dl-cdn.alpinelinux.org/alpine/v3.24/releases/x86_64/alpine-virt-3.24.1-x86_64.iso"}
+2026/10/08 16:08:51 ui error: --> proxmox-iso.alpine: failed to download ISO with all the provided URLs, attempted: https://dl-cdn.alpinelinux.org/alpine/v3.24/releases/x86_64/alpine-virt-3.24.1-x86_64.iso
+2026/10/08 16:08:51 ui: 
+==> Builds finished but no artifacts were created.
+2026/10/08 16:08:51 [INFO] (telemetry) Finalizing.
+2026/10/08 16:08:51 waiting for all plugin processes to complete...
+2026/10/08 16:08:51 /home/admin/.config/packer/plugins/github.com/hashicorp/proxmox/packer-plugin-proxmox_v1.2.4_x5.0_linux_amd64: plugin process exited
+2026/10/08 16:08:51 /usr/bin/packer: plugin process exited

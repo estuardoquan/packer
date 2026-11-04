@@ -1,6 +1,6 @@
 build {
     source "proxmox-iso.image" {
-        name         = "debian-4000"
+        name         = "debian"
         boot_command = var.boot_cmd_debian_efi
         boot_wait    = var.boot_wait
 

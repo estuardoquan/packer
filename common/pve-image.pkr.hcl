@@ -41,20 +41,17 @@ source "proxmox-iso" "image" {
 
     // Disks
     scsi_controller = var.scsi_controller
-    dynamic "disks" {
-      for_each = var.disks
-        content {
-          type         = disks.value.type
-          storage_pool = disks.value.storage_pool
-          disk_size    = disks.value.size
-          cache_mode   = disks.value.cache_mode
-          format       = disks.value.format
-          io_thread    = disks.value.io_thread
-          discard      = disks.value.discard
-          ssd          = disks.value.ssd
-        }
-
+    disks {
+      type         = var.disk_type
+      storage_pool = var.disk_storage_pool
+      disk_size    = var.disk_size
+      cache_mode   = var.disk_cache_mode
+      format       = var.disk_format
+      io_thread    = var.disk_io_thread
+      discard      = var.disk_discard
+      ssd          = var.disk_ssd
     }
+
     // Cloud-init
     cloud_init              = var.cloud_init
     cloud_init_storage_pool = var.cloud_init_storage_pool

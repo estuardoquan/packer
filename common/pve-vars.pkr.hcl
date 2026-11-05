@@ -194,8 +194,8 @@ variable "disk_format" {
 }
 
 variable "disk_io_thread" {
-  type =
-  default = 
+  type = bool
+  default = false
 }
 
 variable "disk_size" {

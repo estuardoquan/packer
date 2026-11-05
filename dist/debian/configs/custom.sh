@@ -3,5 +3,5 @@
 set -eu
 
 apt-get update
-apt-get install -y --no-install-recommends \
+apt-get install -y \
     git neovim stow tmux

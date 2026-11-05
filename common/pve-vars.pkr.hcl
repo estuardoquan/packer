@@ -175,19 +175,62 @@ variable "memory" {
   default = 1024
 }
 
-// Disk Variables //
-variable "disks" {
-  type = map(object({
-    cache_mode = optional(string, "writeback")
-    discard = optional(bool, false)
-    format = optional(string ,"raw")
-    io_thread = optional(bool, false)
-    size = optional(string, "8G")
-    ssd = optional(bool, false)
-    storage_pool = optional(string, "local-lvm")
-    type = optional(string, "scsi")
-  }))
+
+variable "disk_cache_mode" {
+  type = string
+  default = "writeback"
 }
+
+
+variable "disk_discard" {
+  type = bool
+  default = false
+}
+
+
+variable "disk_format" {
+  type = string
+  default = "raw"
+}
+
+variable "disk_io_thread" {
+  type =
+  default = 
+}
+
+variable "disk_size" {
+  type = string
+  default = "8G"
+}
+
+variable "disk_ssd" {
+  type = bool
+  default = false
+}
+
+variable "disk_storage_pool" {
+  type = string
+  default = "local-lvm"
+}
+
+variable "disk_type" {
+  type = string
+  default = "scsi"
+}
+
+// Disk Variables //
+//variable "disks" {
+//  type = map(object({
+//    cache_mode = optional(string, "writeback")
+//    discard = optional(bool, false)
+//    format = optional(string ,"raw")
+//    io_thread = optional(bool, false)
+//    size = optional(string, "8G")
+//    ssd = optional(bool, false)
+//    storage_pool = optional(string, "local-lvm")
+//    type = optional(string, "scsi")
+//  }))
+//}
 
 // Swap Variables //
 variable "swap_size" {

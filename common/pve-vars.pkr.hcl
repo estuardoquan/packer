@@ -167,7 +167,7 @@ variable "vcpu" {
 
 variable "cpu_type" {
   type    = string
-  default = "host"
+  default = "x86-64-v2-AES"
 }
 
 variable "memory" {
@@ -200,7 +200,7 @@ variable "disk_io_thread" {
 
 variable "disk_size" {
   type = string
-  default = "8G"
+  default = "4G"
 }
 
 variable "disk_ssd" {
@@ -235,7 +235,7 @@ variable "disk_type" {
 // Swap Variables //
 variable "swap_size" {
     type = number
-    default = "4096"
+    default = "2048"
 }
 
 // Network Variables //

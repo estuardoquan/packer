@@ -216,6 +216,12 @@ variable "disk_type" {
   default = "scsi"
 }
 
+// Swap Variables //
+variable "swap_size" {
+    type = number
+    default = "4096"
+}
+
 // Network Variables //
 variable "net_bridge" {
   type    = string

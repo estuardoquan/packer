@@ -235,7 +235,7 @@ variable "disk_type" {
 // Swap Variables //
 variable "swap_size" {
     type = number
-    default = "2048"
+    default = ""
 }
 
 // Network Variables //

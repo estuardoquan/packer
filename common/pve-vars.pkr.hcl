@@ -218,6 +218,11 @@ variable "disk_type" {
   default = "scsi"
 }
 
+variable "disk_lv" {
+  type = string
+  default = "root_lv"
+}
+
 // Disk Variables //
 //variable "disks" {
 //  type = map(object({
@@ -235,6 +240,11 @@ variable "disk_type" {
 // Swap Variables //
 variable "swap_size" {
     type = number
+}
+
+variable "swap_lv" {
+    type = string
+    default = "swap_lv"
 }
 
 // Network Variables //

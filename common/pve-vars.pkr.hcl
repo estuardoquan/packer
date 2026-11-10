@@ -220,7 +220,7 @@ variable "disk_type" {
 
 variable "disk_lv" {
   type = string
-  default = "root_lv"
+  default = "lv_root"
 }
 
 // Disk Variables //
@@ -244,7 +244,7 @@ variable "swap_size" {
 
 variable "swap_lv" {
     type = string
-    default = "swap_lv"
+    default = "lv_swap"
 }
 
 // Network Variables //

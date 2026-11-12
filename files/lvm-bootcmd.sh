@@ -1,11 +1,4 @@
 #!/bin/sh
-# usage: lvm-disk.sh <scsi-key> <vg> <lv>=<size> [<lv>=<size> ...]
-#
-#   lvm-disk.sh scsi0 vg0 lv_root=100%
-#   lvm-disk.sh scsi1 vg1 lv_data=50% lv_home=100%
-#
-# size: "100%" = all free space in the VG; "N%" = N percent of the VG.
-
 k=$1
 vg=$2
 shift 2
@@ -18,7 +11,6 @@ fi
 name=${disk##*/}
 
 # --- PV -------------------------------------------------------------------
-
 # PV on this disk: the disk itself, or one of its partitions
 pv=
 for p in $(pvs --noheadings -o pv_name); do
@@ -51,7 +43,6 @@ else
 fi
 
 # --- VG -------------------------------------------------------------------
-
 cur=$(pvs --noheadings -o vg_name "$pv" | tr -d ' ')
 if [ -z "$cur" ]; then
     if vgs "$vg" >/dev/null 2>&1; then
@@ -66,7 +57,6 @@ elif [ "$cur" != "$vg" ]; then
 fi
 
 # --- LVs ------------------------------------------------------------------
-
 # pass 1: LVs sized N% of the VG
 for arg in "$@"; do
     lv=${arg%%=*}

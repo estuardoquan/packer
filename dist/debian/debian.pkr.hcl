@@ -34,7 +34,7 @@ build {
         destination = "/usr/local/sbin/lvm-bootcmd.sh"
     }
 
-   provisioner "shell" {
+    provisioner "shell" {
         inline = ["chmod 0755 /usr/local/sbin/lvm-bootcmd.sh"]
     }
 

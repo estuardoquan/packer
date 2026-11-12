@@ -30,7 +30,7 @@ build {
     }
     
     provisioner "file" {
-        source      = "${path.root}/../files/lvm-disk.sh"
+        source      = "${path.root}/../../files/lvm-disk.sh"
         destination = "/usr/local/sbin/lvm-disk.sh"
     }
 

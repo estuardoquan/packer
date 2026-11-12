@@ -28,7 +28,7 @@ build {
         template_name = var.vm_template["debian13"]
         vm_id         = var.vm_id["debian13"]
     }
-    
+
     provisioner "file" {
         source      = "${path.root}/../../files/lvm-bootcmd.sh"
         destination = "/usr/local/sbin/lvm-bootcmd.sh"
@@ -45,5 +45,4 @@ build {
         ])
     }
 
- 
 }

@@ -28,11 +28,22 @@ build {
         template_name = var.vm_template["debian13"]
         vm_id         = var.vm_id["debian13"]
     }
+    
+    provisioner "file" {
+        source      = "${path.root}/../files/lvm-disk.sh"
+        destination = "/usr/local/sbin/lvm-disk.sh"
+    }
 
     provisioner "shell" {
         scripts = concat(var.user_scripts, [
           "${path.root}/configs/custom.sh",
           "${path.root}/configs/cleanup.sh",
         ])
+        inline = ["chmod 0755 /usr/local/sbin/lvm-disk.sh"]
+    }
+
+        
+
+    provisioner "shell" {
     }
 }

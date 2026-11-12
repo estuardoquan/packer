@@ -30,8 +30,12 @@ build {
     }
     
     provisioner "file" {
-        source      = "${path.root}/../../files/lvm-disk.sh"
-        destination = "/usr/local/sbin/lvm-disk.sh"
+        source      = "${path.root}/../../files/lvm-bootcmd.sh"
+        destination = "/usr/local/sbin/lvm-bootcmd.sh"
+    }
+
+   provisioner "shell" {
+        inline = ["chmod 0755 /usr/local/sbin/lvm-bootcmd.sh"]
     }
 
     provisioner "shell" {
@@ -39,11 +43,7 @@ build {
           "${path.root}/configs/custom.sh",
           "${path.root}/configs/cleanup.sh",
         ])
-        inline = ["chmod 0755 /usr/local/sbin/lvm-disk.sh"]
     }
 
-        
-
-    provisioner "shell" {
-    }
+ 
 }

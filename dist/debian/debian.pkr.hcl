@@ -29,15 +29,6 @@ build {
         vm_id         = var.vm_id["debian13"]
     }
 
-    provisioner "file" {
-        source      = "${path.root}/../../files/lvm-bootcmd.sh"
-        destination = "/usr/local/sbin/lvm-bootcmd.sh"
-    }
-
-    provisioner "shell" {
-        inline = ["chmod 0755 /usr/local/sbin/lvm-bootcmd.sh"]
-    }
-
     provisioner "shell" {
         scripts = concat(var.user_scripts, [
           "${path.root}/configs/custom.sh",
